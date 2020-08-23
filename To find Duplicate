@@ -1,0 +1,16 @@
+int sum(int arr[],int size){
+    if(size==0){
+        return 0;
+    }
+   
+       return arr[0]+ sum(arr+1, size-1); ;
+}
+int DuplicateNumber(int arr[], int size){
+    
+    
+    int wholesum=sum(arr,size);
+    int sumOfNminustwo=(size-1)*(size-2)/2;
+    int Dublicate= wholesum-sumOfNminustwo;
+    return Dublicate;
+
+}
